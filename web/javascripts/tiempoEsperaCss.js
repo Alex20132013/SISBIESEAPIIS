@@ -1,0 +1,1 @@
+setTimeout(function(){ $(elem).css('active','display: none'); },1000);

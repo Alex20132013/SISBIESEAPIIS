@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Validando_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Validando_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Validando_usuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_validacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Eliminar_validacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Eliminar_validacionResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Validando_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:Validando_usuario" />
+  </wsdl:message>
+  <wsdl:message name="Validando_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:Validando_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_validacionSoapIn">
+    <wsdl:part name="parameters" element="tns:Eliminar_validacion" />
+  </wsdl:message>
+  <wsdl:message name="Eliminar_validacionSoapOut">
+    <wsdl:part name="parameters" element="tns:Eliminar_validacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSConsumirSoap">
+    <wsdl:operation name="Validando_usuario">
+      <wsdl:input message="tns:Validando_usuarioSoapIn" />
+      <wsdl:output message="tns:Validando_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_validacion">
+      <wsdl:input message="tns:Eliminar_validacionSoapIn" />
+      <wsdl:output message="tns:Eliminar_validacionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSConsumirSoap" type="tns:WSConsumirSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Validando_usuario">
+      <soap:operation soapAction="http://tempuri.org/Validando_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_validacion">
+      <soap:operation soapAction="http://tempuri.org/Eliminar_validacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSConsumirSoap12" type="tns:WSConsumirSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Validando_usuario">
+      <soap12:operation soapAction="http://tempuri.org/Validando_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_validacion">
+      <soap12:operation soapAction="http://tempuri.org/Eliminar_validacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSConsumir">
+    <wsdl:port name="WSConsumirSoap" binding="tns:WSConsumirSoap">
+      <soap:address location="http://10.0.2.157:8089/WSValidador/WSConsumir.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSConsumirSoap12" binding="tns:WSConsumirSoap12">
+      <soap12:address location="http://10.0.2.157:8089/WSValidador/WSConsumir.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

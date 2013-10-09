@@ -1,0 +1,172 @@
+
+root { 
+    display: block;
+}
+
+body{
+	background-color: #cccccc;
+	
+}
+/*------------------------------estilos de letraasss--------------------------*/
+h1 {
+	margin: 0px;
+	padding: 2px 0;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h2 {
+	margin: 0 0 10px 0;
+	padding: 10px 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #2807cf;
+}
+
+h3 {
+	margin: 0 0 10px 0;
+	padding: 0px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #9f1a04;
+}
+/*-------------------Principal      border-style: solid;----------------------*/
+#Principal{
+    width:1081px;
+    height:765px;
+    margin:20px auto 60px auto;
+    box-shadow: 10px 0px 5px 0px;
+}
+/*-------------------Cabeza----------------------*/
+#Cabeza{
+    width:1081px;
+    height:120px;
+    margin:3px auto;
+}
+#Portada
+{
+    width:645px;
+    height: 120px;
+    background-image:url("../Imagenes/general/portada3.png");
+    float: left;
+}
+#Precentacion
+{
+    width:436px;
+    height:120px;
+    float: right;
+    /*background-image:url("../Imagenes/general/portada5.png");*/
+}
+/*-------------------MenuCabeza----------------------*/
+#MenuCabeza
+{
+    background-image: url("../Imagenes/general/barramenu.png");
+    width:1081px;
+    height:40px;
+}
+#Barra
+{
+   width:229px;
+    height:40px;
+    float: left;
+}
+#Menuss
+{
+   width:843px;
+   height:40px;
+   float: right;
+}
+#menus
+{
+   width:685px;
+    height:40px;
+    float: left; 
+}
+#Seccion
+{
+   width:150px;
+    height:40px;
+    float: right;
+}
+.cursor
+{
+    cursor: pointer;
+}
+/*-------------------Contenidoooo----------------------*/
+#Contenido
+{
+    width: 1081px;
+    height: 558px;
+}
+#MenuLateral
+{
+    width: 229px;
+    height: 558px;
+    float: left;
+    background-image: url("../Imagenes/general/Lateral.png");
+        
+}
+
+#MenuLateral a
+{
+    font-size: 1.0em; 
+    color: #FFFFFF; 
+    font-family: Georgia,"Times New Roman",Times,serif;
+    text-decoration:none;
+}
+#MenuLateral ul
+{
+    /* list-style-type: square;*/
+    /*list-style-image: url(imagenes/Lateral.png);*/
+    list-style-image: url("../Imagenes/general/vineta.png");
+}
+#MenuLateral ul li
+{
+}
+#MenuLateral ul li a 
+{
+    font-size: 1.0em; 
+    color: #FFFFFF; 
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+
+#Catalogo
+{
+    width: 852px;
+    height: 558px;
+    float: right;
+    overflow: auto;
+}
+#cuerpo{
+    width: 623px;
+    height: 558px;
+    float: left;
+     overflow: auto;
+}
+#MenuDerecho{
+    width: 229px;
+    height: 558px;
+    float: right;
+    background-image: url("../Imagenes/general/Lateral.png");
+}
+/*-------------------Pieeeeeeeeee----------------------*/
+#Pie {
+	width: 1081px;
+        height: 35px;
+        float: left;
+        color: #FFFFFF; 
+        font-family: Georgia,"Times New Roman",Times,serif;
+        font-size: small;
+         text-decoration:none;
+	background-image: url("../Imagenes/general/portada1.png");
+	text-align: center;
+        
+}
+#Pie a
+{
+        margin: 0px 10px 10px 20px;
+         color: #FFFFFF; 
+         padding: 12px 15px;
+         font-family: Georgia,"Times New Roman",Times,serif;
+         text-decoration:none;
+}

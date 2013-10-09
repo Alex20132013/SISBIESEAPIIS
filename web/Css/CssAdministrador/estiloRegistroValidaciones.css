@@ -1,0 +1,8 @@
+.errores{
+     display: none;
+     /*la altura desde arriba a la direccion del Caja de Textos*/
+     margin-top: -25px;
+     /*Dimencion donde se mostrara el mensajasa*/
+     margin-left: 370px;
+     position: absolute;
+}

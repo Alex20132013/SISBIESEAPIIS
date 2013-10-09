@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="categoria" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     t_administrador.`cod_administrador` AS t_administrador_cod_administrador,
+     t_administrador.`nombre_administrador` AS t_administrador_nombre_administrador,
+     t_administrador.`apellidos_administrador` AS t_administrador_apellidos_administrador,
+     t_administrador.`correo_admin` AS t_administrador_correo_admin,
+     t_administrador.`estado_admi` AS t_administrador_estado_admi,
+     t_administrador.`fecha_reg` AS t_administrador_fecha_reg,
+     t_administrador.`fecha_ven` AS t_administrador_fecha_ven
+FROM
+     `t_administrador` t_administrador
+
+Where categoria_admi=$P{categoria}]]>
+	</queryString>
+	<field name="t_administrador_cod_administrador" class="java.math.BigDecimal"/>
+	<field name="t_administrador_nombre_administrador" class="java.lang.String"/>
+	<field name="t_administrador_apellidos_administrador" class="java.lang.String"/>
+	<field name="t_administrador_correo_admin" class="java.lang.String"/>
+	<field name="t_administrador_estado_admi" class="java.lang.Boolean"/>
+	<field name="t_administrador_fecha_reg" class="java.sql.Date"/>
+	<field name="t_administrador_fecha_ven" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{t_administrador_cod_administrador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{t_administrador_nombre_administrador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{t_administrador_correo_admin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{t_administrador_estado_admi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{t_administrador_fecha_ven}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,32 @@
+
+.wraper{
+	margin:0 auto;
+	width:400px;
+	height:auto;
+}
+
+.informacion
+{
+	text-align:center;
+}
+
+
+#formAjax label{
+	display: block;
+}
+
+
+#formAjax .error{
+	font-size:0.8em;
+	color:#ff0000;
+	display:inline;
+	padding:0 0 0 3px;
+}
+
+#datosContacto input{
+	width: 290px;
+	height:25px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 5px 5px;
+    font-size: 0.8em;
+}

@@ -1,0 +1,15 @@
+#rBusquedas  li {
+	 list-style: none;
+         font-size: 15px;
+}
+#rBusquedas ul,li:hover {
+	color: #fafafa;
+}
+
+#rBusquedas ul :first-child {
+	border-bottom-color: #04acec; 
+}
+#rBusquedas ul :first-child {
+	border-right-color: #0299d3; 
+	border-bottom-color: transparent; 	
+}
